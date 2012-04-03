@@ -123,7 +123,6 @@ conntrack_mt(const struct sk_buff *skb, struct xt_action_param *par,
 
 	ct = nf_ct_get(skb, &ctinfo);
 
-
 	if (ct) {
 		if (nf_ct_is_untracked(ct))
 			statebit = XT_CONNTRACK_STATE_UNTRACKED;

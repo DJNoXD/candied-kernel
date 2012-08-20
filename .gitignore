@@ -82,3 +82,5 @@ GTAGS
 
 arch/arm/boot/compressed/.
 arch/arm/boot/compressed/vmlinux
+
+.DS_Store

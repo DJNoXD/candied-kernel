@@ -26,11 +26,6 @@ cd ..
 ./anykernelmaker $BASEDIR $VTAG-ta-vsyncOff-$DATUM $1
 cd $BASEDIR
 
-echo create Modules
-cd ..
-./anymodulemaker $BASEDIR $VTAG-$DATUM $1
-cd $BASEDIR
-
 make clean
 echo
 echo ta_on
@@ -39,7 +34,7 @@ cp .config-ta_on .config
 cd ..
 ./anykernelmaker $BASEDIR $VTAG-ta-vsync-$DATUM $1
 #cd $BASEDIR
-#
+
 #make clean
 #echo
 #echo roqu_off
@@ -57,16 +52,16 @@ cd ..
 #cd ..
 #./anykernelmaker $BASEDIR $VTAG-roqu-vsync-$DATUM $1
 
-#echo 
-#cd $1
-#git status
-#echo 
-#git pull
-#git add .
-#git commit -a -m "$DATUM"
-#git push
+echo 
+cd $1
+git status
+echo 
+git pull
+git add .
+git commit -a -m "$DATUM"
+git push
 echo finished!
-#cd ..
+cd ..
 cd $BASEDIR
 
 #restore original config

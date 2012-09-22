@@ -33,6 +33,7 @@
 #include "diagchar.h" // for POOL_TYPE_USB_STRUCT
 #include "diagmem.h" // for diagmem_alloc()
 #include <linux/delay.h>
+#define POOL_TYPE_USB_STRUCT    2
 #endif /*LG_FW_MTC*/
 /* LGE_CHANGE_E [jihoon.lee@lge.com] 2010-02-22, LG_FW_MTC */
 
@@ -383,7 +384,9 @@ int lg_diag_write_overflow(void *pStart, void *pDone, void *pEnd)
   driver->usb_write_ptr_svc->buf = pStart;
   driver->usb_write_ptr_svc->length = driver->used;
 
+#ifndef CONFIG_MACH_MSM7X27_THUNDERC
   err = diag_write(driver->usb_write_ptr_svc);
+#endif
   if (err) {
       printk(KERN_ERR "LG_FW : lg_diag_write_overflow, diag_write error (%d)\n", err);
       /*Free the buffer right away if write failed */

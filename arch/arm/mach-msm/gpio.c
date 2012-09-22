@@ -633,3 +633,7 @@ void msm_gpio_find_out(const unsigned gpio, void __iomem **out,
 	*out = msm_chip->regs.out;
 	*offset = gpio - msm_chip->chip.base;
 }
+
+static int msm_gpio_configure(struct goog_gpio_chip *chip,
+                        unsigned int gpio,
+                        unsigned long flags);

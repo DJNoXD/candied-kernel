@@ -173,6 +173,7 @@ struct diagchar_dev {
 	struct diag_request *write_ptr_1;
 	struct diag_request *write_ptr_2;
 	struct diag_request *usb_read_ptr;
+        struct diag_request *usb_write_ptr_svc;
 	struct diag_request *write_ptr_svc;
 	struct diag_request *write_ptr_qdsp_1;
 	struct diag_request *write_ptr_qdsp_2;

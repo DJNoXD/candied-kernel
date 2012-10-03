@@ -395,7 +395,7 @@ struct jbd2_inode {
 	struct inode *i_vfs_inode;
 
 	/* Flags of inode [j_list_lock] */
-	unsigned long i_flags;
+	unsigned int i_flags;
 };
 
 struct jbd2_revoke_table_s;

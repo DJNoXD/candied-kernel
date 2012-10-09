@@ -5,9 +5,13 @@
 # Each configuration option enables a list of files.
 
 ifeq ($(CONFIG_MACH_MSM7X27_THUNDERG), y)
-obj-$(CONFIG_SENSOR_GP2AP)  += gp2ap002_thunderg.o
+	ifeq ($(CONFIG_MACH_MSM7X27_THUNDERG_506), y)
+	        obj-$(CONFIG_SENSOR_GP2AP)  += gp2ap002.o
+	else
+		obj-$(CONFIG_SENSOR_GP2AP)  += gp2ap002_thunderg.o
+	endif
 else
-obj-$(CONFIG_SENSOR_GP2AP)  += gp2ap002.o
+	obj-$(CONFIG_SENSOR_GP2AP)  += gp2ap002.o
 endif
 obj-$(CONFIG_SENSOR_BMA150)	+= bma150.o
 obj-$(CONFIG_SENSOR_BMA250) += bma250_driver.o

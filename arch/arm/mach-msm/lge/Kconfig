@@ -37,6 +37,14 @@ config MACH_MSM7X27_THUNDERG
 	help
 	  Support for the LGE MSM7x27 THUNDER Global board.
 
+config MACH_MSM7X27_THUNDERG_506
+        depends on ARCH_MSM7X27
+        depends on !MSM_STACKED_MEMORY
+        select MACH_LGE
+        bool "MSM7x27 THUNDER Global p506"
+        help
+          Support for the LGE MSM7x27 THUNDER Global board p506.
+
 config MACH_MSM7X27_GELATO
     depends on ARCH_MSM7X27
     depends on !MSM_STACKED_MEMORY

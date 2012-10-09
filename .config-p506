@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # Linux kernel version: 2.6.35.14
-# Wed Oct  3 21:16:09 2012
+# Tue Oct  9 21:50:04 2012
 #
 CONFIG_ARM=y
 CONFIG_SYS_SUPPORTS_APM_EMULATION=y
@@ -291,6 +291,7 @@ CONFIG_MACH_LGE=y
 #
 # CONFIG_MACH_MSM7X27_THUNDERC is not set
 CONFIG_MACH_MSM7X27_THUNDERG=y
+CONFIG_MACH_MSM7X27_THUNDERG_506=y
 # CONFIG_MACH_MSM7X27_GELATO is not set
 # CONFIG_MACH_MSM7X27_UNIVA is not set
 # CONFIG_MACH_MSM7X27_MUSCAT is not set

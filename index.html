@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>candiedIce kernel by DJNoXD</title>
+    <title>candied(Ice) kernel by DJNoXD</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -17,8 +17,8 @@
   <body>
 
       <header>
-        <h1>candiedIce kernel</h1>
-        <p>based on cyanogen 2.6.35.10 kernel for LGE msm7x27(T) devices</p>
+        <h1>candied(Ice) kernel</h1>
+        <p>based on cyanogen 2.6.35.10 kernel for LGE msm7x27(T) devices (for gingerbread, ice-creamsand-wich and jellybean)</p>
       </header>
 
       <div id="banner">
@@ -125,6 +125,12 @@ If you are using my kernels on other ROMs than cyanogen or with older android ve
 <h2>v2.x</h2>
 
 <ul>
+<li>mmc: use really long write timeout to deal with crappy cards (Paul Walmsley) thanks go to oldslowdiver for telling me</li>
+<li>Hack for CRT animations fix (rashed97)</li>
+<li>apply some PM patches (thachtunganh)</li>
+<li>enable UID_STAT</li>
+<li>using linaro toolchain (gcc4.6)</li>
+<li><em><strong>changes from 2.5.8 above</strong></em></li>
 <li>Revert "more FS tweaks (umaro)"</li>
 <li>Revert "Disable fsync() (franciscofranco)"</li>
 <li>some debuging enabled</li>

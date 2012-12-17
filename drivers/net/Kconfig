@@ -2854,10 +2854,6 @@ source "drivers/net/wan/Kconfig"
 
 source "drivers/atm/Kconfig"
 
-source "drivers/ieee802154/Kconfig"
-
-source "drivers/s390/net/Kconfig"
-
 source "drivers/net/caif/Kconfig"
 
 config XEN_NETDEV_FRONTEND

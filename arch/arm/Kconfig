@@ -1138,8 +1138,6 @@ config PCI_HOST_ITE8152
 
 source "drivers/pci/Kconfig"
 
-source "drivers/pcmcia/Kconfig"
-
 endmenu
 
 menu "Kernel Features"

@@ -20,15 +20,9 @@ source "drivers/misc/Kconfig"
 
 source "drivers/ide/Kconfig"
 
-source "drivers/scsi/Kconfig"
-
-source "drivers/ata/Kconfig"
-
 source "drivers/md/Kconfig"
 
 source "drivers/message/fusion/Kconfig"
-
-source "drivers/firewire/Kconfig"
 
 source "drivers/message/i2o/Kconfig"
 
@@ -107,8 +101,6 @@ source "drivers/auxdisplay/Kconfig"
 source "drivers/uio/Kconfig"
 
 source "drivers/vlynq/Kconfig"
-
-source "drivers/xen/Kconfig"
 
 source "drivers/staging/Kconfig"
 

@@ -46,8 +46,8 @@
 #ifdef CONFIG_ARCH_MSM7X27
 #define MSM_PMEM_MDP_SIZE	0xC3D000 //4MB for camera + 9MB for gralloc
 #define MSM_PMEM_ADSP_SIZE	0x6DE000
-#define MSM_PMEM_AUDIO_SIZE	0x5B000
-#define MSM_FB_SIZE		0x177000
+#define MSM_PMEM_AUDIO_SIZE	0xB71000 //0x5B000
+#define MSM_FB_SIZE		0x2EE000 //0x177000
 #define PMEM_KERNEL_EBI1_SIZE	0x1C000
 
 /* Using lower 1MB of OEMSBL memory for GPU_PHYS */

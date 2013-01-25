@@ -294,7 +294,7 @@ void suspend_sys_sync_queue(void)
   spin_lock(&suspend_sys_sync_lock);
   ret = queue_work(suspend_sys_sync_work_queue, &suspend_sys_sync_work);
   if (ret)
-    suspend_sys_sync_count;
+//    suspend_sys_sync_count;
   spin_unlock(&suspend_sys_sync_lock);
 }
 
@@ -340,7 +340,7 @@ int suspend_sys_sync_wait(void)
 static void suspend_backoff(void)
 {
   pr_info("suspend: too many immediate wakeups, back off\n");
-  suspend_backoff_count;
+//  suspend_backoff_count;
   wake_lock_timeout(&suspend_backoff_lock,
         msecs_to_jiffies(suspend_backoff_count *
              SUSPEND_BACKOFF_INTERVAL));

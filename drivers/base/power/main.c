@@ -55,8 +55,8 @@ static DEFINE_TIMER(dpm_drv_wd, dpm_drv_timeout, 0, 0);
  */
 static bool transition_started;
 
-static void pm_dev_trace(int type, struct device *dev, pm_message_t
-state, char *info); static int async_error;
+//static void pm_dev_trace(int type, struct device *dev, pm_message_t
+//state, char *info); static int async_error;
 
 /**
  * device_pm_init - Initialize the PM-related part of a device object.

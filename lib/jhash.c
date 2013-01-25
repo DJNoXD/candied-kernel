@@ -26,7 +26,7 @@
 #include <linux/jhash.h>
 
 /* __jhash_mix -- mix 3 32-bit values reversibly. */
-#define __jhash_mix(a, b, c)			\
+/*#define __jhash_mix(a, b, c)			\
 {						\
 	a -= c;  a ^= rol32(c, 4);  c += b;	\
 	b -= a;  b ^= rol32(a, 6);  a += c;	\
@@ -34,7 +34,7 @@
 	a -= c;  a ^= rol32(c, 16); c += b;	\
 	b -= a;  b ^= rol32(a, 19); a += c;	\
 	c -= b;  c ^= rol32(b, 4);  b += a;	\
-}
+}*/
 
 /* jhash - hash an arbitrary key
  * @k: sequence of bytes as key

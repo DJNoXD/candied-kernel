@@ -144,7 +144,7 @@ static unsigned armpmu_perf_cache_map[PERF_COUNT_HW_CACHE_MAX]
 static int
 armpmu_map_cache_event(u64 config)
 {
-	unsigned int cache_type, cache_op, cache_result, ret;
+	unsigned int cache_type, cache_op, cache_result, ret = 0;
 
 	cache_type = (config >>  0) & 0xff;
 	if (cache_type >= PERF_COUNT_HW_CACHE_MAX)
@@ -1928,7 +1928,7 @@ static inline int armv7_pmnc_has_overflowed(unsigned long pmnc)
 static inline int armv7_pmnc_counter_has_overflowed(unsigned long pmnc,
 					enum armv7_counters counter)
 {
-	int ret;
+	int ret = 0;
 
 	if (counter == ARMV7_CYCLE_COUNTER)
 		ret = pmnc & ARMV7_FLAG_C;

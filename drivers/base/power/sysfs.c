@@ -145,13 +145,13 @@ wake_store(struct device * dev, struct device_attribute *attr,
 static DEVICE_ATTR(wakeup, 0644, wake_show, wake_store);
 
 #ifdef CONFIG_PM_SLEEP
-static ssize_t wakeup_count_show(struct device *dev,
+/*static ssize_t wakeup_count_show(struct device *dev,
                                 struct device_attribute *attr, char *buf)
 {
         return sprintf(buf, "%lu\n", dev->power.wakeup_count);
-}
+}*/
 
-static DEVICE_ATTR(wakeup_count, 0444, wakeup_count_show, NULL);
+//static DEVICE_ATTR(wakeup_count, 0444, wakeup_count_show, NULL);
 #endif
 
 #ifdef CONFIG_PM_ADVANCED_DEBUG

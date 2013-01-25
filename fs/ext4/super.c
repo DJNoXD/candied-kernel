@@ -308,6 +308,7 @@ void ext4_journal_abort_handle(const char *caller, const char *err_fn,
 	jbd2_journal_abort_handle(handle);
 }
 
+#if 0
 static void __save_error_info(struct super_block *sb, const char *func,
 			    unsigned int line)
 {
@@ -334,13 +335,14 @@ static void __save_error_info(struct super_block *sb, const char *func,
 		mod_timer(&EXT4_SB(sb)->s_err_report, jiffies + 24*60*60*HZ);
 	es->s_error_count = cpu_to_le32(le32_to_cpu(es->s_error_count) + 1);
 }
+#endif
 
-static void save_error_info(struct super_block *sb, const char *func,
+/*static void save_error_info(struct super_block *sb, const char *func,
 			    unsigned int line)
 {
 	__save_error_info(sb, func, line);
 	ext4_commit_super(sb, 1);
-}
+}*/
 
 
 /* Deal with the reporting of failure conditions on a filesystem such as

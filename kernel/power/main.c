@@ -244,16 +244,16 @@ power_attr(state);
  * are any wakeup events detected after 'wakeup_count' was written to.
  */
 
-static ssize_t wakeup_count_show(struct kobject *kobj,
+/*static ssize_t wakeup_count_show(struct kobject *kobj,
 				struct kobj_attribute *attr,
 				char *buf)
 {
 	unsigned long val;
 
 	return pm_get_wakeup_count(&val) ? sprintf(buf, "%lu\n", val) : -EINTR;
-}
+}*/
 
-static ssize_t wakeup_count_store(struct kobject *kobj,
+/*static ssize_t wakeup_count_store(struct kobject *kobj,
 				struct kobj_attribute *attr,
 				const char *buf, size_t n)
 {
@@ -264,9 +264,9 @@ static ssize_t wakeup_count_store(struct kobject *kobj,
 			return n;
 	}
 	return -EINVAL;
-}
+}*/
 
-power_attr(wakeup_count);
+//power_attr(wakeup_count);
 #endif /* CONFIG_PM_SLEEP */
 
 #ifdef CONFIG_PM_TRACE

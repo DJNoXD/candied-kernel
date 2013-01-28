@@ -703,7 +703,12 @@ extern int lge_lcd_panel;
 		pinfo->bpp = 16;
 	
 		// vsync config
-		pinfo->lcd.vsync_enable = FALSE;
+		#ifdef CONFIG_FB_MSM_VSYNC_ENABLED
+			pinfo->lcd.vsync_enable = TRUE;
+		#endif
+		#ifndef CONFIG_FB_MSM_VSYNC_ENABLED
+			pinfo->lcd.vsync_enable = FALSE;
+		#endif
 		pinfo->lcd.refx100 = (mddi_novatek_rows_per_second * 100) /
                         		mddi_novatek_rows_per_refresh;
 
@@ -711,7 +716,12 @@ extern int lge_lcd_panel;
 		pinfo->lcd.v_front_porch = 200;
 		pinfo->lcd.v_pulse_width = 30;
 
-		pinfo->lcd.hw_vsync_mode = FALSE;
+		#ifdef CONFIG_FB_MSM_VSYNC_ENABLED
+			pinfo->lcd.hw_vsync_mode = TRUE;
+		#endif
+		#ifndef CONFIG_FB_MSM_VSYNC_ENABLED
+			pinfo->lcd.hw_vsync_mode = FALSE;
+		#endif
 		pinfo->lcd.vsync_notifier_period = (1 * HZ);
 
 		pinfo->bl_max = 4;

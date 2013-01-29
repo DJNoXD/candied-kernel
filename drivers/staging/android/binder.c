@@ -3665,4 +3665,3 @@ static int __init binder_init(void)
 device_initcall(binder_init);
 
 MODULE_LICENSE("GPL v2");
-
